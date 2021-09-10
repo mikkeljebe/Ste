@@ -6,6 +6,8 @@ let playerChoice='';
 let randomCC ='';
 let tekst ='';
 let result ='';
+let skjult = 'skjult';
+const bilder = ['alex-gruber-KVsFiYXy0BE-unsplash.jpg', 'andrej-lisakov-fGZ2x8wFxC0-unsplash.jpg', 'jerome-Ru-id6AmO6A-unsplash.jpg']
 
 //view
 show();
@@ -24,15 +26,15 @@ function show(){
     <h1>Hva velger du?</h1>
     <br>
     <main>
-    <button class='button' onclick='velg("stein")'>Stein</button>
-    <button class='' onclick='velg("saks")'>Saks</button>
-    <button class='' onclick='velg("papir")'>Papir</button> 
+    <button class='stein' onclick='velg("stein")'>Stein</button>
+    <button class='saks' onclick='velg("saks")'>Saks</button>
+    <button class='papir' onclick='velg("papir")'>Papir</button> 
     </main>
     
-<div id='vs'>
-    <div class='bilde'>${playerChoice}</div> 
-    VS 
-    <div class="bilde">${randomCC}</div>
+<div id='${skjult}' class='vs'>
+    <div class='bilde ${playerChoice}'></div> 
+    VS
+    <div class="bilde ${randomCC}"></div>
 </div>
     
     <br><div id="result">${tekst}</div>
@@ -50,6 +52,7 @@ function show(){
     
 function velg(x){
     playerChoice = x;
+    skjult = '';
     
     randomCC = options[Math.floor(Math.random() * options.length)];
     
@@ -75,7 +78,7 @@ function velg(x){
     if (playerChoice == 'papir' && randomCC == 'saks') {
         result = 1;
     }
-    console.log(result)
+
     show();
     // 1=win 2=tie 3=tape
 }

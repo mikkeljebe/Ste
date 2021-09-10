@@ -1,70 +1,104 @@
-.valg {
-  border: 1px solid black;
-}
+
 
 body {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-h1 {
-
+  
 }
 
 main {
   margin: auto;
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: row;
   justify-content: center;
   
 }
   
-#vs {
+.vs {
   display: flex;
   flex-direction: row;
   justify-content: center;
   height: 30vh;
-  align-items: center;;
+  align-items: center;
+  margin: 70px 40px 10px 40px ;
+  gap: 30px;
 
+}
+
+#skjult {
+  display: none;
 }
 
 .bilde {
-  height: 200px;
-  width: 200px;
-  text-align: center;
-  padding: 30px;
 
+  padding: 50px;
+  width: 100px;
+  height: 100px;
+  
+  
+  color: rgb(48, 48, 48);
+  font-weight: bold;
+  font-size: 2em;
+  border-radius: 5px;
 
+  
+  
 }
+
 span {
   margin: 50px;
   padding-top: 50px;
   width: 60vw;
 }
+
 button {
  
   border: 1px solid rgb(0, 0, 0);
-  background-color: tomato;
+
   padding: 5px;
   width: 200px;
-  height: 70px;
+  height: 200px;
   margin: 10px;
   line-height: 20px;
   color: rgb(48, 48, 48);
   font-weight: bold;
   font-size: 2em;
   text-align: center;
-
+  border-radius: 5px;
+  transition-duration: 0.4s;
 }
 
+button:hover{
+  color: white;
+  box-shadow: 1px 6px 21px -3px #000000;
+}
+.saks {
+  background-image: url('alex-gruber-KVsFiYXy0BE-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover; 
+
+}
+.stein {
+  background-image: url('jerome-Ru-id6AmO6A-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center top; 
+  
+  
+}
+
+.papir {
+  background-image: url('andrej-lisakov-fGZ2x8wFxC0-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-position: center; 
+}
 
 #result {
   margin: 50px auto;
   height: 10vw;
   width: 50vw;
-  
- 
   font-size: 2rem;
   
 }
